@@ -1,0 +1,157 @@
+:root {
+  --main-bg-color: #fffef9;
+  --block-bg-color: #82a7ca;
+  --btn-bg-color: #88a629;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--main-bg-color);
+  overflow: hidden;
+}
+
+
+.d-none {
+  display: none;
+}
+
+
+.block-wrapper {
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block {
+  width: 50%;
+  height: 50%;
+
+  background-color: var(--block-bg-color);
+
+  transition: transform 2s ease-in;
+  -webkit-transition: transform 2s ease-in;
+  -moz-transition: transform 2s ease-in;
+  -o-transition: transform 2s ease-in;
+}
+
+
+.circle {
+  position: absolute;
+
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  
+  display: flex;
+
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.circleBtnAnimationStart {
+  animation-name: circleBtnAnimation;
+  animation-fill-mode: both;
+  animation-duration: 3s;
+}
+
+
+.btn {
+  background-color: var(--btn-bg-color);
+  cursor: pointer;
+  border: 10px double var(--main-bg-color);
+}
+
+.btn-text {
+  margin: auto;
+
+  font-size: 1.5rem;
+  color: var(--main-bg-color);
+} 
+
+.btn:disabled {
+  cursor: default;
+}
+
+.btn:not(:disabled):hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.btn:not(:disabled):active {
+  box-shadow: 0 0 10px inset rgba(0,0,0,0.5);
+}
+
+
+@keyframes circleBtnAnimation {
+  33% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+
+  100% { 
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+.form {
+  position: absolute;
+  width: 25%;
+  min-width: 280px;
+  height: 45%;
+  min-height: 250px;
+  margin: auto;
+
+  top: -50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  background: #d2e5f5;
+  border: 3px double #82a7ca;
+  border-radius: 30px;
+  box-sizing: border-box;
+  transition: top 0.7s ease-out;
+}
+
+.form_select {
+  width: 80%;
+  height: 18%;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  background: #d2e5f5;
+  border: 2px dashed #82a7ca;
+  border-radius: 20px;
+  outline: none;
+
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.formAnimation {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.submit {
+  width: 50%;
+  height: 17%;
+  border: 2px solid var(--main-bg-color);
+  border-radius: 20px;
+  margin: 0 auto;
+}

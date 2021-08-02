@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тестовое IPOS</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="block-wrapper">
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+    </div>
+
+    <button class="btn circle" disabled onclick="formAnimation()">
+      <b class="btn-text">Нажать</b>
+    </button> 
+
+    <form action="#" class="form">
+      <select class="form_select mark">
+        <option value="" disabled selected>Марка автомобиля</option>
+        <option value="audi">audi</option>
+      </select>
+      <select class="form_select model">
+        <option value="" disabled selected>Модель автомобиля</option>
+        <option value="A4">A4</option>
+      </select>
+      <select class="form_select year">
+        <option value="" disabled selected>Год выпуска</option>
+        <option value="2015">2015</option>
+      </select>
+      <button class="btn submit">
+        <b class="btn-text">Доставить</b>
+      </button>
+    </form>
+  </div>
+
+  <script src="js/index.js"></script>
+    
+</body>
+</html>
