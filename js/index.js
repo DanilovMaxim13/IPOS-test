@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(animationTiming, 1);
+  fillSelect();
 });
 
 function animationTiming() {
@@ -55,7 +56,7 @@ function resetAnimation() {
 }
 
 function fillSelect() {
-  var carObj = JSON.parse("bd.json");
-  console.log(carObj);
-  let markSelect = document.querySelector('.mark');
+  let carList = $.getJSON( "https://danilovmaxim13.github.io/IPOS-test/bd.json", function(data){
+            console.log(data);
+      })
 }
