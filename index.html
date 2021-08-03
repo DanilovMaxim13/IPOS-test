@@ -10,14 +10,14 @@
 </head>
 <body>
   <div class="container">
-    <div class="block-wrapper">
+     <div class="block-wrapper">
       <div class="block"></div>
       <div class="block"></div>
       <div class="block"></div>
       <div class="block"></div>
     </div>
 
-    <button class="btn circle" disabled onclick="formAnimation()">
+    <button class="btn circle d-none" disabled onclick="clickCircleBtn()">
       <b class="btn-text">Нажать</b>
     </button> 
 
@@ -28,13 +28,43 @@
       </select>
       <select class="form_select year" onchange="changeSelect()">
       </select>
-      <button class="btn submit">
-        <b class="btn-text">Доставить</b>
-      </button>
     </form>
+    <button class="btn submit d-none" onclick="clickSubmit()">
+      <b class="btn-text">Доставить</b>
+    </button>
+
+    <table class="calendar d-none">
+      <thead>
+        <tr>
+          <td class="suitable" onclick="controlCalendar(-1)"><b>‹</b></td>
+          <td colspan="5" class="calendar__header unsuitable"></td>
+          <td class="suitable"onclick="controlCalendar(1)"><b>›</b></td>
+        </td>
+        <tr class="dn">
+          <td class="unsuitable">Пн
+          <td class="unsuitable">Вт
+          <td class="unsuitable">Ср
+          <td class="unsuitable">Чт
+          <td class="unsuitable">Пт
+          <td class="unsuitable">Сб
+          <td class="unsuitable">Вс
+      </thead>
+      <tbody class="calendar__body">
+
+      </tbody>
+    </table>
+
+    <div class="information d-none">
+      <p class="information__text">Вы выбрали audi A4 2015 <br> ожидайте доставку 26.06.2021</p>
+      <button class="btn restart">
+        <b class="btn-text">Начать заново</b>
+      </button>
+    </div>
+
   </div>
 
   <script src="js/index.js"></script>
-    
+  <script src="js/form.js"></script>
+  <script src="js/calendar.js"></script>
 </body>
 </html>
