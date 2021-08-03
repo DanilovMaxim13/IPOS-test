@@ -167,28 +167,28 @@ body {
 
 @media (max-height: 700px) {
   .formAnimation {
-    top: 40%;
+    top: 45%;
   }
   .submit {
-    top: 70%;
+    top: 75%;
   }
 }
 
 @media (max-height: 530px) {
   .formAnimation {
-    top: 35%;
+    top: 45%;
   }
   .submit {
-    top: 70%;
+    top: 80%;
   }
 }
 
 @media (max-height: 430px) {
   .formAnimation {
-    top: 35%;
+    top: 45%;
   }
   .submit {
-    top: 80%;
+    top: 85%;
   }
 }
 
@@ -255,4 +255,16 @@ body {
 
 .d-none {
   display: none;
+}
+
+@media (max-width: 750px) {
+  .information {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .information {
+    width: 90%;
+  }
 }
