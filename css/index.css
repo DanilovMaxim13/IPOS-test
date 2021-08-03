@@ -22,7 +22,7 @@ body {
   overflow: hidden;
 }
 
-
+/* 4 блока */
 .block-wrapper {
   width: 250px;
   height: 250px;
@@ -43,7 +43,7 @@ body {
   -o-transition: transform 2s ease-in;
 }
 
-
+/* Кнопка перехода к селектам */
 .circle {
   position: absolute;
 
@@ -63,7 +63,7 @@ body {
   animation-duration: 3s;
 }
 
-
+/* Кнопки */
 .btn {
   background-color: var(--btn-bg-color);
   cursor: pointer;
@@ -102,6 +102,8 @@ body {
   }
 }
 
+
+/* Форма */
 .form {
   position: absolute;
   width: 25%;
@@ -161,6 +163,33 @@ body {
 
 .submitAnimation {
   opacity: 1;
+}
+
+@media (max-height: 700px) {
+  .formAnimation {
+    top: 40%;
+  }
+  .submit {
+    top: 70%;
+  }
+}
+
+@media (max-height: 530px) {
+  .formAnimation {
+    top: 35%;
+  }
+  .submit {
+    top: 70%;
+  }
+}
+
+@media (max-height: 430px) {
+  .formAnimation {
+    top: 35%;
+  }
+  .submit {
+    top: 80%;
+  }
 }
 
 /* Календарь */

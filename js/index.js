@@ -14,6 +14,7 @@ function resetAnimation() {
     elem.classList.toggle("d-none");
   });
 
+  document.querySelector('.information').classList.toggle("d-none");
   setTimeout(animationTiming, 1);
 }
 

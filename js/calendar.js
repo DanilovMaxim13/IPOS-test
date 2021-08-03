@@ -80,6 +80,12 @@ function clickDate(dateDelivery) {
   });
   document.querySelector('.calendar').classList.toggle("d-none");
 
+  dateDelivery = dateDelivery.split(".");
+
+  if (dateDelivery[1]++ < 10){
+    dateDelivery[1] = "0" + dateDelivery[1];
+  }
+
   document.querySelector('.information').classList.toggle("d-none");
-  document.querySelector('.information__text').innerHTML = "Вы выбрали "+ mark + " " + model + " " + year +"<br> Ожидайте доставку " + dateDelivery;
+  document.querySelector('.information__text').innerHTML = "Вы выбрали "+ mark + " " + model + " " + year +"<br> Ожидайте доставку " + dateDelivery[0] + "." + dateDelivery[1] + "." + dateDelivery[2];
 }
