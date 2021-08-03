@@ -22,17 +22,11 @@
     </button> 
 
     <form action="#" class="form">
-      <select class="form_select mark">
-        <option value="" disabled selected>Марка автомобиля</option>
-        <option value="audi">audi</option>
+      <select class="form_select mark" onchange="changeSelect()">
       </select>
-      <select class="form_select model">
-        <option value="" disabled selected>Модель автомобиля</option>
-        <option value="A4">A4</option>
+      <select class="form_select model" onchange="changeSelect()">
       </select>
-      <select class="form_select year">
-        <option value="" disabled selected>Год выпуска</option>
-        <option value="2015">2015</option>
+      <select class="form_select year" onchange="changeSelect()">
       </select>
       <button class="btn submit">
         <b class="btn-text">Доставить</b>
